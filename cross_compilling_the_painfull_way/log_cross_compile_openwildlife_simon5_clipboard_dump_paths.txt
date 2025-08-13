@@ -1,0 +1,16 @@
+O=../really_weird_build
+
+
+
+sudo make ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- imx_v8_defconfig
+
+phil@theo:~$ #img/lib/modules/219 ko debix:/lib/modules/6.6.3/kernel/drivers/media/i2c/
+phil@theo:~$ 
+phil@theo:~$ 
+phil@theo:~$ 
+phil@theo:~$ #arch/arm64/boot/dts/freescale/imx8mp-debix-core-imx219.dtb arch/arm64/boot/dts/freescale/imx8mp-evk.dtb
+
+
+
+
+//

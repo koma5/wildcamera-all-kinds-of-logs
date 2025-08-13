@@ -1,0 +1,73 @@
+sudo apt install gcc-aarch64-linux-gnu
+sudo apt install -y git bc bison flex libssl-dev make libc6-dev libncurses5-dev
+
+git clone https://github.com/svogl/linux-nxp-debix
+cd linux-nxp-debix/
+git checkout lf_6.6.36-debix_model_ab_4w
+
+#scp  debix@[2a02:168:475d:2:3e37:85bd:3082:191e]:/proc/config.gz .
+#sudo zcat config.gz > .config
+
+#sudo make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  oldconfig
+#sudo make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  menuconfig 
+   
+   #failed
+   34  sudo apt install dpkg-dev
+   35  sudo make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  bindeb-pkg
+
+
+  384  sudo make ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- imx_v8_defconfig
+
+mkdir -p img/ img/boot img/lib/modules 
+
+make menuconfig imx_v8_defconfig  ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- 
+make modules                      ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=img/lib/modules/ INSTALL_PATH=img/boot -j6
+make                              ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  INSTALL_MOD_PATH=img/lib/modules/ INSTALL_PATH=img/boot -j12
+make install                      ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_PATH=img/boot -j6
+make modules_install              ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_PATH=img/boot INSTALL_MOD_PATH=img/lib/modules/ 
+make dtbs_install                 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_PATH=img/boot INSTALL_MOD_PATH=img/lib/modules/ INSTALL_DTBS_PATH=img/boot
+
+### just as a note
+
+
+  384  sudo make ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- imx_v8_defconfig
+  385  ls
+  552  make modules ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  INSTALL_MOD_PATH=img/lib/modules/ INSTALL_PATH=img/boot -j6
+  558  make ARCH=arm64 INSTALL_PATH=img/boot install
+  560  make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  INSTALL_MOD_PATH=img/lib/modules/ INSTALL_PATH=img/boot -j6
+  561  make modules ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-  INSTALL_MOD_PATH=img/lib/modules/ INSTALL_PATH=img/boot -j6
+  562  make ARCH=arm64 INSTALL_PATH=img/boot INSTALL_MOD_PATH=img/lib/modules/ install
+
+  567  make ARCH=arm64 INSTALL_PATH=img/boot INSTALL_MOD_PATH=img/lib/modules/ modules_install
+  568  ls img/lib/modules/
+  569  make ARCH=arm64 INSTALL_PATH=img/boot INSTALL_MOD_PATH=img/lib/modules/ INSTALL_DTBS_PATH=img/boot dtbs_install
+  570  history | tail
+
+
+###
+
+sudo make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j12
+
+
+
+# install
+# temporary directory for kernel
+mkdir /tmp/armkernel
+
+# modules - puts them into right place under there
+make ARCH=arm64 INSTALL_MOD_PATH=/tmp/armkernel modules_install
+
+# kernel itself - but this time needs /boot added
+mkdir /tmp/armkernel/boot
+make ARCH=arm64 INSTALL_PATH=/tmp/armkernel/boot install
+
+# device tree files, these normally go into even deeper subdirectories
+make ARCH=arm64 INSTALL_DTBS_PATH=/tmp/armkernel/boot dtbs_install
+
+# did everything above without root (as to not break the host system) - fix ownership now
+sudo chown -R root: .
+
+
+
+# pack everything up with tar into a single data stream, pass it into ssh, and unpack it on the target system
+tar cv boot lib/modules | ssh debix@imx8mpevk sudo tar xvC /
