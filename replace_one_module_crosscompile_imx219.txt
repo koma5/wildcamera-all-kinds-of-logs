@@ -1,0 +1,16 @@
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=build-modules LOCALVERSION="" -j$(nproc) modules dtbs
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=build-modules LOCALVERSION="" INSTALL_DTBS_PATH=build-dtbs -j$(nproc) modules_install dtbs_install
+#check timestamp
+ls -hal build-modules/lib/modules/6.6.36/kernel/drivers/media/i2c/imx219.ko 
+scp build-modules/lib/modules/6.6.36/kernel/drivers/media/i2c/imx219.ko         debix@imx8mpevk:/tmp/
+
+
+# over on the board
+sudo cp /tmp/imx219.ko /lib/modules/6.6.3/updates
+sudo depmod
+sudo modprobe imx219
+
+
+sudo rmmod imx8_media_dev
+sudo modprobe imx8_media_dev
+
