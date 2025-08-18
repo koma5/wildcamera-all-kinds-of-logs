@@ -41,3 +41,31 @@ https://www.youtube.com/watch?v=pw0kA9w3kUo
 
 
 http://buildroot.org/
+
+
+
+
+
+
+
+
+Releases - Yocto Project
+https://wiki.yoctoproject.org/wiki/Releases
+
+OpenEmbedded Layer Index - meta-imx-sdk
+http://layers.openembedded.org/layerindex/branch/master/layer/meta-imx-sdk/
+
+Software
+https://debix.io/Software/downloadn.html
+
+Introduction to Embedded Linux Part 5 - Patch Device Tree for I2C in Yocto | Digi-Key Electronics - YouTube
+https://www.youtube.com/watch?v=srM6u8e4tyw
+
+How Does Linux Work? | Greg Kroah-Hartman - YouTube
+https://www.youtube.com/watch?v=-1-OjxPJZcs
+
+Livepatch — The Linux Kernel documentation
+https://docs.kernel.org/livepatch/livepatch.html
+
+
+
