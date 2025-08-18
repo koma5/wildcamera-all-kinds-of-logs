@@ -24,3 +24,17 @@ https://docs.kernel.org/6.15/core-api/index.html#concurrency-primitives
 
 whats this? Had this as an open tab.
 https://elixir.bootlin.com/linux/v6.6.3/source/Documentation/devicetree/bindings/media/i2c/imx219.yaml#L68
+
+
+device tree imx219 on raspberry pi:
+https://github.com/raspberrypi/linux/blob/rpi-6.12.y/arch/arm/boot/dts/overlays/imx219.dtsi
+
+
+linux plumbers conference:
+https://lpc.events/
+
+
+just poped into mind. Need to rewatch.
+Kernel Recipes 2024 - virtme-ng - YouTube
+https://www.youtube.com/watch?v=pw0kA9w3kUo
+
