@@ -1,0 +1,5 @@
+https://www.devicetree.org/specifications
+
+
+sombody created there own camera module arround IMX219
+https://www.eevblog.com/forum/projects/imx219-mipi-csi-camera-fpga-rx-implementation-datasheet-discrepancy/
