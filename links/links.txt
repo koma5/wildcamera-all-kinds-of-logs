@@ -3,3 +3,24 @@ https://www.devicetree.org/specifications
 
 sombody created there own camera module arround IMX219
 https://www.eevblog.com/forum/projects/imx219-mipi-csi-camera-fpga-rx-implementation-datasheet-discrepancy/
+
+blog post on MIPI-CSI media host device tree v4l and other inners of how camera integration works
+https://www.virtanatech.com/blog/indoor-nano-drones-integrating-a-vio-capable-mipi-csi2-camera-on-the-imx93
+
+
+a little bit about PADs on CSI MIPI
+https://stackoverflow.com/questions/74596476/csi-2-v4l2-driver-programming
+
+
+where the imx219 driver lives:
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/media/i2c/imx219.c
+
+some broad information about U-Boot (not read / not sure if usefull or good)
+https://krinkinmu.github.io/2023/08/21/how-u-boot-loads-linux-kernel.html
+
+ok there is actuall kernel docs. Just thoght there's nothing really. =,D
+https://docs.kernel.org/
+https://docs.kernel.org/6.15/core-api/index.html#concurrency-primitives
+
+whats this? Had this as an open tab.
+https://elixir.bootlin.com/linux/v6.6.3/source/Documentation/devicetree/bindings/media/i2c/imx219.yaml#L68
