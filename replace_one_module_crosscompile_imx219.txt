@@ -6,11 +6,16 @@ scp build-modules/lib/modules/6.6.36/kernel/drivers/media/i2c/imx219.ko         
 
 
 # over on the board
-sudo cp /tmp/imx219.ko /lib/modules/6.6.3/updates
-sudo depmod
-sudo modprobe imx219
+#sudo cp /tmp/imx219.ko /lib/modules/6.6.3/updates
+#sudo depmod
+#sudo modprobe imx219
+
+sudo cp /tmp/imx219.ko /usr/lib/modules/6.6.36/kernel/drivers/media/i2c/imx219.ko
+sudo reboot
 
 
+
+in case it worked and reg error is gone try media host.
 sudo rmmod imx8_media_dev
 sudo modprobe imx8_media_dev
 
