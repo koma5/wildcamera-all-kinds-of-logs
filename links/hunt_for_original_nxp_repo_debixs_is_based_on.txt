@@ -1,0 +1,64 @@
+nxp-imx/meta-imx: i.MX Yocto Project i.MX BSP Layer
+https://github.com/nxp-imx/meta-imx
+
+nxp-imx
+https://github.com/nxp-imx/
+
+nxp-imx/mfgtools: Freescale/NXP I.MX Chip image deploy tools.
+https://github.com/nxp-imx/mfgtools
+
+nxp-imx/meta-fsl-bsp-release: i.MX Yocto Project Release Layer
+https://github.com/nxp-imx/meta-fsl-bsp-release
+
+Freescale repositories
+https://github.com/orgs/Freescale/repositories
+
+Freescale/meta-fsl-arm: OpenEmbedded/Yocto BSP layer for Freescale's ARM platforms
+https://github.com/Freescale/meta-fsl-arm
+
+FSL Community BSP
+http://freescale.github.io/#download
+
+
+
+
+debix-tech/yocto-nxp-debix
+https://github.com/debix-tech/yocto-nxp-debix/tree/L6.12.3-debix_model_ab
+
+NXP repositories
+https://github.com/orgs/NXP/repositories
+
+i.MX Yocto Project User's Guide - UG10164.pdf
+https://www.nxp.com/docs/en/user-guide/UG10164.pdf
+
+FSL Community BSP
+http://freescale.github.io/#documentation
+
+nxp-imx/meta-imx: i.MX Yocto Project i.MX BSP Layer
+https://github.com/nxp-imx/meta-imx?tab=readme-ov-file
+
+How to compile Linux Kernel Image and device tree using Yocto SDK - NXP Community
+https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/How-to-compile-Linux-Kernel-Image-and-device-tree-using-Yocto/ta-p/2022759
+
+i.MX Linux Release Notes - IMX_LINUX_RELEASE_NOTES.pdf
+https://www.nxp.com/docs/en/release-note/IMX_LINUX_RELEASE_NOTES.pdf
+
+nxp-imx/linux-imx: i.MX Linux kernel
+https://github.com/nxp-imx/linux-imx/
+
+imx-manifest/README.md at imx-linux-nanbield · nxp-imx/imx-manifest
+https://github.com/nxp-imx/imx-manifest/blob/imx-linux-nanbield/README.md
+
+sources/meta-imx/tools/imx-setup-release.sh - Google Search
+https://www.google.com/search?q=sources%2Fmeta-imx%2Ftools%2Fimx-setup-release.sh&sca_esv=b9c8812b6c95ceb0&source=hp&ei=0AKjaLCLJNyZi-gP3MrY-AY&iflsig=AOw8s4IAAAAAaKMQ4FKXCC0tYfE2SWsIRQ4fK_38q3nk&ved=0ahUKEwiws83NlZSPAxXczAIHHVwlFm8Q4dUDCA0&uact=5&oq=sources%2Fmeta-imx%2Ftools%2Fimx-setup-release.sh&gs_lp=Egdnd3Mtd2l6Iitzb3VyY2VzL21ldGEtaW14L3Rvb2xzL2lteC1zZXR1cC1yZWxlYXNlLnNoSOAFUABYAHAAeACQAQCYAWygAWyqAQMwLjG4AQPIAQD4AQL4AQGYAgCgAgCYAwCSBwCgB1-yBwC4BwDCBwDIBwA&sclient=gws-wiz
+
+FRDM-IMX91 Software Release Introduction - NXP Community
+https://community.nxp.com/t5/FRDM-Training-Hub/FRDM-IMX91-Software-Release-Introduction/ta-p/2056104
+
+owa5x_yocto_kirkstone/imx-setup-release.sh at master · Owasys/owa5x_yocto_kirkstone
+https://github.com/Owasys/owa5x_yocto_kirkstone/blob/master/imx-setup-release.sh
+
+imx-linux-build.md · aa5facb050f08b2bdf2d74187c7c8812df38746a · undefined · GitLab
+https://gitlab.avnet.com/nxp/mpu/imx-linux/-/blob/aa5facb050f08b2bdf2d74187c7c8812df38746a/imx-linux-build.md
+
+
