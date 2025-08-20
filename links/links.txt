@@ -68,4 +68,9 @@ Livepatch — The Linux Kernel documentation
 https://docs.kernel.org/livepatch/livepatch.html
 
 
+Welcome to Linux From Scratch!
+https://www.linuxfromscratch.org/
+
+CLFS Trac What is Cross Linux From Scratch? ¶
+https://trac.clfs.org/
 
