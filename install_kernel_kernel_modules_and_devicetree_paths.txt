@@ -1,0 +1,15 @@
+# Install device tree on the board
+scp build-dtbs/freescale/imx8mp-debix-core-imx219.dtb debix@imx8mpevk:/tmp/
+sudo cp /tmp/imx8mp-debix-core-imx219.dtb /boot/imx8mp-evk.dtb
+
+
+# Install modules on the board
+delete link in /lib/modules
+sudo mv /boot/modules /lib/
+tar czf - build-modules/lib/modules/6.6.36 | ssh debix@10.168.0.117 'tar xzf - -C /tmp/'
+sudo mv /tmp/6.6.36 /lib/modules/
+
+
+# Install Kernel on the board
+scp  arch/arm64/boot/Image debix@10.168.0.117:/tmp/
+sudo  cp /tmp/Image /boot/Image
