@@ -1,3 +1,6 @@
+make make more/totally verbose: V=1
+
+
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=build-modules LOCALVERSION="" -j$(nproc) modules dtbs
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=build-modules LOCALVERSION="" INSTALL_DTBS_PATH=build-dtbs -j$(nproc) modules_install dtbs_install
 #check timestamp
