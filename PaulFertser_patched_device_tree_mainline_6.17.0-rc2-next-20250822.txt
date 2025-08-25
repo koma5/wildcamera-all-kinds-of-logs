@@ -1,0 +1,103 @@
+diff --git a/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts b/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
+index af02af9e5334..8c3205a7f67d 100644
+--- a/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
++++ b/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
+@@ -66,6 +66,28 @@ reg_usb_hub: regulator-usb-hub {
+ 		gpio = <&gpio4 26 GPIO_ACTIVE_HIGH>;
+ 		enable-active-high;
+ 	};
++
++	/*
++	 * The three camera regulators are controlled by a single GPIO. Declare
++	 * a single regulator for the three supplies.
++	 */
++	reg_cam: regulator-cam {
++		compatible = "regulator-fixed";
++		regulator-name = "reg_cam";
++		gpio = <&gpio1 6 GPIO_ACTIVE_HIGH>;
++		pinctrl-names = "default";
++		pinctrl-0 = <&pinctrl_reg_cam>;
++		enable-active-high;
++		regulator-min-microvolt = <3300000>;
++		regulator-max-microvolt = <3300000>;
++	};
++
++	cam24m: clock-cam24m {
++		compatible = "fixed-clock";
++		#clock-cells = <0>;
++		clock-frequency = <24000000>;
++		clock-output-names = "cam24m";
++	};
+ };
+ 
+ &A53_0 {
+@@ -233,6 +255,28 @@ ldo5: LDO5 {
+ &i2c2 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&pinctrl_i2c2>;
++        clock-frequency = <400000>;
++        status = "okay";
++
++        imx219_0: imx219_mipi@10 {
++                compatible = "sony,imx219";
++		reg = <0x10>;
++		clocks = <&cam24m>;
++		VANA-supply = <&reg_cam>;
++		VDIG-supply = <&reg_cam>;
++		VDDL-supply = <&reg_cam>;
++		status = "okay";
++
++		port {
++			sony_imx219: endpoint {
++				remote-endpoint = <&mipi_csi_0_in>;
++				clock-lanes = <0>;
++				clock-noncontinuous;
++				data-lanes = <1 2>;
++				link-frequencies = /bits/ 64 <456000000>;
++			};
++		};
++        };
+ };
+ 
+ &i2c3 {
+@@ -581,4 +625,40 @@ pinctrl_wdog: wdoggrp {
+ 			MX8MP_IOMUXC_GPIO1_IO02__WDOG1_WDOG_B				0xc6
+ 		>;
+ 	};
++
++	pinctrl_reg_cam: regcamgrp {
++		fsl,pins = <
++                        MX8MP_IOMUXC_GPIO1_IO06__GPIO1_IO06             		0x19
++		>;
++	};
++};
++
++&isi_0 {
++	status = "okay";
++};
++
++&mipi_csi_0 {
++	status = "okay";
++
++	ports {
++		#address-cells = <1>;
++		#size-cells = <0>;
++
++		port@0 {
++			reg = <0>;
++
++			mipi_csi_0_in: endpoint {
++				remote-endpoint = <&sony_imx219>;
++				data-lanes = <1 2>;
++			};
++		};
++
++		port@1 {
++			reg = <1>;
++
++			mipi_csi_0_out: endpoint {
++				remote-endpoint = <&isi_in_0>;
++			};
++		};
++	};
+ };
