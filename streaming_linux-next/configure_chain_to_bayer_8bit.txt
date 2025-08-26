@@ -1,0 +1,9 @@
+media-ctl -l '"imx219 1-0010":0->"csis-32e40000.csi":0[1]'
+media-ctl --set-v4l2 "'mxc_isi.0':1[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'mxc_isi.0':0[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'csis-32e40000.csi':1[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'imx219 1-0010':0[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'crossbar':0[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'crossbar':3[fmt:SRGGB8_1X8/640x480 field:none colorspace:raw]"
+v4l2-ctl -d /dev/video0 --set-fmt-video=width=640,height=480,pixelformat='RGGB' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+
