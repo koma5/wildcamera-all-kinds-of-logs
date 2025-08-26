@@ -1,5 +1,10 @@
 gst-launch-1.0 v4l2src device=/dev/video0  !  video/x-bayer, width=640, height=480, format=rggb, framerate=30/1 ! bayer2rgb ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
 
+
+surprisingly to receive: mpv tcp://imx8mp:5000
+
+
+
 #  h264 try
 gst-launch-1.0 v4l2src device=/dev/video0  !  video/x-bayer, width=640, height=480, format=rggb, framerate=30/1 ! bayer2rgb ! videoconvert ! h264enc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
 
