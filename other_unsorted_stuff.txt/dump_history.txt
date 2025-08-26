@@ -1,0 +1,289 @@
+    1  who
+    2  ip a
+    3  ls /lib/modules
+    4  ls -hal /lib/modules
+    5  rm /lib/modules
+    6  sudo mv /boot/modules /lib/
+    7  mv /tmp/build-modules/lib/modules/6.17.0-rc2-next-20250822 /lib/modules/
+    8  sudo mv /tmp/build-modules/lib/modules/6.17.0-rc2-next-20250822 /lib/modules/
+    9  sudo  cp /tmp/Image /boot/Image
+   10  sudo cp /tmp/imx8mp-debix-model-a.dtb /boot/imx8mp-evk.dtb
+   11  reboot
+   12  sudo reboot
+   13  ls .ssh
+   14  ip a
+   15  dmesg
+   16  dmesg | grep -i isi
+   17  dmesg | grep -i media
+   18  ls -la /boot
+   19  mount
+   20  sudo strings /dev/mmcblk1 | less
+   21  sudo -s
+   22  ip a
+   23  ls -l /boot
+   24  sudo cp imx8mp-evk.dtb /boot/
+   25  ls -l /boot
+   26  sudo reboot
+   27  systemctl stop rc.local
+   28  sudo systemctl stop rc.local
+   29  sudo su
+   30  uptime
+   31  uname -a
+   32  dmesg
+   33  dmesg | grep isi
+   34  lsmod
+   35  lsmod | grep isi
+   36  lsmod | grep imx
+   37  cat /sys/kernel/debug/gpio
+   38  sudo cat /sys/kernel/debug/gpio
+   39  sudo modprobe imx219
+   40  sudo dmesg | tail
+   41  media-ctl -p
+   42  media-ctl -p --help
+   43  media-ctl -p -d1
+   44  media-ctl -p -d0
+   45  cd /sys/bus/platform/drivers/
+   46  ls
+   47  ls *isi*
+   48  ls *isi* -d
+   49  cd mxc-isi/
+   50  ls -l
+   51  dmesg | grep isi
+   52  cd ..
+   53  ls *csi* -d
+   54  cd imx-mipi-csis/
+   55  ls
+   56  dmesg | grep csi
+   57  cd /sys
+   58  find -name \*media\*
+   59  cd bus/media/
+   60  ls -la
+   61  ls -la drivers
+   62  cd devices/
+   63  ls
+   64  ls -la
+   65  cd media0
+   66  ls -la
+   67  lsmod
+   68  sudo dmesg -w &
+   69  sudo rmmod imx8_isi
+   70  sudo modprobe imx8_isi
+   71  ls /sys/firmware/devicetree/base/soc@0/bus@32c00000/isi@32e00000/ -l
+   72  cat /sys/firmware/devicetree/base/soc@0/bus@32c00000/isi@32e00000/status
+   73  cat /sys/firmware/devicetree/base/soc@0/bus@32c00000/isi@32e00000/compatible
+   74  cd /sys/bus/platform/drivers/
+   75  ls *isi* -d
+   76  cd mxc-isi
+   77  ls -la
+   78  cd 32e00000.isi
+   79  ls -la
+   80  cat uevent 
+   81  ls video4linux/
+   82  v4l2-ctl -d /dev/video2 --list-formats-ext
+   83  sudo v4l2-ctl -d /dev/video2 --list-formats-ext
+   84  sudo v4l2-ctl -d /dev/vide12 --list-formats-ext
+   85  sudo v4l2-ctl -d /dev/video1 --list-formats-ext
+   86  media-ctl -p
+   87  ls -l /dev/media*
+   88  sudo vi /etc/group
+   89  cd /sys/bus/media/
+   90  ls
+   91  ls drivers
+   92  ls devices/
+   93  cd /sys/class/video4linux/
+   94  ls
+   95  ls -l /dev/video*
+   96  ls -la *
+   97  sudo media-ctl -d0 -p
+   98  sudo media-ctl -d1 -p
+   99  sudo media-ctl -d2 -p
+  100  sudo media-ctl -d0 -p
+  101  ls -la *
+  102  dmesg | grep video2
+  103  dmesg | grep video1
+  104  dmesg | grep video0
+  105  v4l2-ctl -d0 --list-formats-ext
+  106  sudo v4l2-ctl -d0 --list-formats-ext
+  107  sudo v4l2-ctl -d1 --list-formats-ext
+  108  sudo v4l2-ctl -d2 --list-formats-ext
+  109  l-
+  110  ls
+  111  cd video0
+  112  ls
+  113  ls -la
+  114  cat name
+  115  grep . ../*/name
+  116  dmesg
+  117  uptime
+  118  systemctl status
+  119  systemctl stop rc-local.service
+  120  systemctl disable rc-local.service
+  121  who
+  122  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='Y10 ' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  123  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='RGGB' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  124  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  125  v4l2-ctl -d /dev/video1 --set-fmt-video=width=1280,height=720,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  126  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  127  cat /proc/cpuinfo 
+  128  cat /proc/interrupts r
+  129  cd /sys/s
+  130  cd /sys/
+  131  find -name \*media\*
+  132  cat firmware/devicetree/base/soc@0/bus@32c00000/csi@32e40000/compatible 
+  133  cat firmware/devicetree/base/soc@0/bus@32c00000/csi@32e40000/status
+  134  ls -l bus/platform/drivers/*csi\* -d
+  135  lsmod | grep csi
+  136  cd bus/platform/drivers/imx-mipi-csis/
+  137  ls -la
+  138  cd 32e40000.csi
+  139  ls
+  140  cat ue
+  141  cat uevent 
+  142  ls -la
+  143  i2cdump 
+  144  sudo i2c-detect
+  145  sudo apt install i2c-tools 
+  146  sudo i2cdetect
+  147  sudo i2cdetect -y 1
+  148  sudo i2cdetect -y 0
+  149  sudo i2cdetect -y 2
+  150  find /sys/firmware/devicetree/base/soc@0/ -name \*i2c\*
+  151  cat /sys/firmware/devicetree/base/soc@0/bus@30800000/i2c@30ae0000/50000/
+  152  cat /sys/firmware/devicetree/base/soc@0/bus@30800000/i2c@30ad0000/
+  153  cat /sys/firmware/devicetree/base/soc@0/bus@30800000/i2c@30a30000/imx219_mipi@10/compatible 
+  154  cd
+  155  sudo cp imx8mp-evk.dtb /boot/
+  156  sudo reboot
+  157  who
+  158  sudo i2cdetect -y 2
+  159  cat /sys/firmware/devicetree/base/soc@0/bus@30800000/i2c@30a30000/imx219_mipi@10/compatible 
+  160  systemctl stop rc-local
+  161  systemctl disable rc-local
+  162  who
+  163  uptime
+  164  sudo -s
+  165  systemctl disable rc-local
+  166  systemctl stop rc-local
+  167  vim /etc/rc.local
+  168  media-ctl -p
+  169  cat /sys/firmware/devicetree/base/soc@0/bus@30800000/i2c@30a30000/status
+  170  lsmod 
+  171  dmesg
+  172  dmesg | grep imx219
+  173  sudo i2cdetect -y 1
+  174  ls -l /dev/media*
+  175  media-ctl -p
+  176  v4l2-ctl -d /dev/video0 --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  177  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  178  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='YUV8' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  179  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='YUVY' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  180  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='Y10 ' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  181  cat /proc/interrupts 
+  182  sudo lsmod
+  183  dmesg
+  184  dmesg | grep isi
+  185  dmesg | grep media
+  186  dmesg | grep csi
+  187  media-ctl -p
+  188  cat /sys/kernel/debug/gpio
+  189  sudo cat /sys/kernel/debug/gpio
+  190  sudo -s
+  191  dmesg
+  192  grep csi /proc/interrupts 
+  193  media-ctl -p
+  194  media-ctl --set-v4l2 "'csis-32e40000.csi':0[fmt:SRGGB10_1X10/3280x2464 field:none colorspace:raw]"
+  195  media-ctl --set-v4l2 "'csis-32e40000.csi':1[fmt:SRGGB10_1X10/3280x2464 field:none colorspace:raw]"
+  196  media-ctl -p
+  197  media-ctl --set-v4l2 "'mxc_isi.0':0[fmt:SRGGB10_1X10/3280x2464 field:none colorspace:raw]"
+  198  media-ctl -p
+  199  v4l2-ctl -d /dev/video0  --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  200  media-ctl -p
+  201  grep csi /proc/interrupts 
+  202  dmesg | tail
+  203  media-ctl -l '"imx219 1-0010":0->csis-32e40000.csi:0'
+  204  media-ctl -l '"imx219 1-0010":0->csis-32e40000.csi:0[1]'
+  205  media-ctl -l '"imx219 1-0010":0->"csis-32e40000.csi":0[1]'
+  206  media-ctl -p
+  207  v4l2-ctl -d /dev/video0  --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  208  media-ctl -p
+  209  media-ctl --set-v4l2 "'mxc_isi.0':1[fmt:SRGGB10_1X10/3280x2464 field:none colorspace:raw]"
+  210  media-ctl -p
+  211  v4l2-ctl -d /dev/video0  --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  212  v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  213  media-ctl -p
+  214  grep csi /proc/interrupts 
+  215  sudo cat /sys/kernel/debug/gpio
+  216  sudo dmesg | tail
+  217  sudo -s
+  218  v4l2-ctl -d /dev/video0 --set-fmt-video=width=3280,height=2464,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  219  sudo dmesg | tail
+  220  sudo dmesg | tail -n 100
+  221  gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, format=RGB16, width=640,height=480, framerate=30/1 ! queue ! waylandsink fullscreen=true
+  222  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-mbus-codes
+  223  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-frame-sizes
+  224  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes
+  225  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes 0
+  226  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-mbus-codes
+  227  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes pad=0,code=0x300f
+  228  v4l2-ctl -d /dev/video0 --set-fmt-video=width=640,height=480,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  229  media-ctl --set-v4l2 "'mxc_isi.0':1[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  230  media-ctl --set-v4l2 "'mxc_isi.0':0[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  231  media-ctl --set-v4l2 "'csis-32e40000.csi':1[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  232  media-ctl -p
+  233  media-ctl --set-v4l2 "'imx219 1-0010':0[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  234  media-ctl -p
+  235  media-ctl --set-v4l2 "'crossbar':0[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  236  media-ctl --set-v4l2 "'crossbar':3[fmt:SRGGB10_1X10/640x480 field:none colorspace:raw]"
+  237  media-ctl -p
+  238  v4l2-ctl -d /dev/video0 --set-fmt-video=width=640,height=480,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+  239  ip a
+  240  vim /etc/rc.local
+  241  media-ctl -p
+  242  v4l2-ctl -d /dev/v4l-subdev4 -l
+  243  history
+  244  who
+  245  dmesg
+  246  who
+  247  v4l2-ctl -d /dev/v4l-subdev4 -l
+  248  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes pad=0,code=0x300f
+  249  sudo v4l2-ctl -d /dev/v4l-subdev4 --set-fmt-video=width=3280,height=2464,pixelformat=RG10 --stream-count=1 --stream-mmap --stream-to=hh
+  250  who
+  251  ls
+  252  ls /root/
+  253  sudo su
+  254  who
+  255  history
+  256  ip a
+  257  v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes pad=0,code=0x300f
+  258  gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, format=RGB16, width=640,height=480, framerate=30/1 ! queue ! waylandsink fullscreen=true
+  259  v4l2-ctl --device /dev/v4l-subdev4 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  260  v4l2-ctl --device /dev/v4l-subdev4 --stream-mmap --pixelformat=RG10 --stream-to=KocH-file.raw --stream-count=1
+  261  v4l2-ctl --device /dev/v4l-subdev4 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  262  v4l2-ctl --device /dev/v4l-subdev4 --set-fmt-video=width=1280,height=720,pixelformat=RG10 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  263  v4l2-ctl --device /dev/v4l-subdev4 --set-fmt-video=width=1920,height=1080,pixelformat=RG10 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  264  v4l2-ctl --device /dev/v4l-subdev4 --set-fmt-video=width=640,height=480,pixelformat=RG10 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  265  v4l2-ctl --device /dev/video --set-fmt-video=width=640,height=480,pixelformat=RG10 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  266  v4l2-ctl --device /dev/video0 --set-fmt-video=width=640,height=480,pixelformat=RG10 --stream-mmap --stream-to=KocH-file.raw --stream-count=1
+  267  ls
+  268  gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=RGB ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  269  gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=RG10 ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  270  gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-bayer, format=rggb, width=640, height=480, ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  271  echo <<EOF | nc termbin.com 9999
+  272  debix@imx8mp:~$ gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=RG10 ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  273  WARNING: erroneous pipeline: could not link v4l2src0 to jpegenc0, neither element can handle caps video/x-raw, width=(int)640, height=(int)480, format=(string)RG10
+  274  debix@imx8mp:~$ gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-bayer, format=rggb, width=640, height=480, ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  275  WARNING: erroneous pipeline: could not link v4l2src0 to jpegenc0, jpegenc0 can't handle caps video/x-bayer, format=(string)rggb, width=(int)640, height=(int)480
+  276  EOF
+  277  EOF
+  278  cat <<EOF | nc termbin.com 9999
+  279  debix@imx8mp:~$ gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=RG10 ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  280  WARNING: erroneous pipeline: could not link v4l2src0 to jpegenc0, neither element can handle caps video/x-raw, width=(int)640, height=(int)480, format=(string)RG10
+  281  debix@imx8mp:~$ gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-bayer, format=rggb, width=640, height=480, ! jpegenc ! multipartmux ! tcpserversink host=0.0.0.0 port=5000
+  282  WARNING: erroneous pipeline: could not link v4l2src0 to jpegenc0, jpegenc0 can't handle caps video/x-bayer, format=(string)rggb, width=(int)640, height=(int)480
+  283  EOF
+  284  EOF
+  285  media-ctl -p
+  286  media-ctl -p 
+  287  uptime
+  288  history
+  289  history > dump_history.txt
