@@ -1,0 +1,17 @@
+
+inspired from 
+  arch/arm64/boot/dts/freescale/imx8mp-tqma8mpql-mba8mp-ras314-imx219.dtso
+  https://github.com/koma5/linux-nxp-debix/blob/lf_6.6.36-debix_model_ab_4w/arch/arm64/boot/dts/freescale/imx8mp-debix-core-imx219.dts
+¨
+
+produced this Pauls Patch:
+  freescale/imx8mp-debix-core-imx219.dtb
+
+
+Building linux-next with imx219 in device tree.
+
+For this build we used Linux imx8mp 6.17.0-rc2-next-20250822 commit id 0f4c93f7eb861acab537dbe94441817a270537bf
+
+we did this on this commit on top of Debian debix image2
+if=Model_A_B_Infinity_D12.6_V1.1_20240822.wic
+
