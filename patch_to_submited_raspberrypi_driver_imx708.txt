@@ -1,0 +1,86 @@
+diff --git a/drivers/media/i2c/imx708.c-KocH b/drivers/media/i2c/imx708.c
+index 0f556db7cdb55..912551806584f 100644
+--- a/drivers/media/i2c/imx708.c-KocH
++++ b/drivers/media/i2c/imx708.c
+@@ -6,7 +6,7 @@
+  * Based on Sony imx477 camera driver
+  * Copyright (C) 2020 Raspberry Pi Ltd
+  */
+-#include <asm/unaligned.h>
++#include <linux/unaligned.h>
+ #include <linux/clk.h>
+ #include <linux/delay.h>
+ #include <linux/gpio/consumer.h>
+@@ -922,7 +922,7 @@ static int imx708_open(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+ {
+ 	struct imx708 *imx708 = to_imx708(sd);
+ 	struct v4l2_mbus_framefmt *try_fmt_img =
+-		v4l2_subdev_get_try_format(sd, fh->state, 0);
++		v4l2_subdev_state_get_format(fh->state, 0);
+ 	struct v4l2_rect *try_crop;
+ 
+ 	mutex_lock(&imx708->mutex);
+@@ -939,7 +939,7 @@ static int imx708_open(struct v4l2_subdev *sd, struct v4l2_subdev_fh *fh)
+ 	try_fmt_img->field = V4L2_FIELD_NONE;
+ 
+ 	/* Initialize try_crop */
+-	try_crop = v4l2_subdev_get_try_crop(sd, fh->state, 0);
++	try_crop = v4l2_subdev_state_get_crop(fh->state, 0);
+ 	try_crop->left = IMX708_PIXEL_ARRAY_LEFT;
+ 	try_crop->top = IMX708_PIXEL_ARRAY_TOP;
+ 	try_crop->width = IMX708_PIXEL_ARRAY_WIDTH;
+@@ -1214,8 +1214,7 @@ static int imx708_get_pad_format(struct v4l2_subdev *sd,
+ 
+ 	if (fmt->which == V4L2_SUBDEV_FORMAT_TRY) {
+ 		struct v4l2_mbus_framefmt *try_fmt =
+-			v4l2_subdev_get_try_format(&imx708->sd, sd_state,
+-						   fmt->pad);
++			v4l2_subdev_state_get_format(sd_state, fmt->pad);
+ 		/* update the code which could change due to vflip or hflip */
+ 		try_fmt->code = imx708_get_format_code(imx708);
+ 		fmt->format = *try_fmt;
+@@ -1250,7 +1249,7 @@ static int imx708_set_pad_format(struct v4l2_subdev *sd,
+ 	imx708_update_image_pad_format(imx708, mode, fmt);
+ 
+ 	if (fmt->which == V4L2_SUBDEV_FORMAT_TRY) {
+-		framefmt = v4l2_subdev_get_try_format(sd, sd_state, fmt->pad);
++		framefmt = v4l2_subdev_state_get_format(sd_state, fmt->pad);
+ 		*framefmt = fmt->format;
+ 	} else {
+ 		imx708->mode = mode;
+@@ -1268,7 +1267,7 @@ __imx708_get_pad_crop(struct imx708 *imx708, struct v4l2_subdev_state *sd_state,
+ {
+ 	switch (which) {
+ 	case V4L2_SUBDEV_FORMAT_TRY:
+-		return v4l2_subdev_get_try_crop(&imx708->sd, sd_state, pad);
++		return v4l2_subdev_state_get_crop(sd_state, pad);
+ 	case V4L2_SUBDEV_FORMAT_ACTIVE:
+ 		return &imx708->mode->crop;
+ 	}
+@@ -1878,7 +1877,7 @@ static int imx708_probe(struct i2c_client *client)
+ 	return ret;
+ }
+ 
+-static int imx708_remove(struct i2c_client *client)
++static void imx708_remove(struct i2c_client *client)
+ {
+ 	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+ 	struct imx708 *imx708 = to_imx708(sd);
+@@ -1891,8 +1890,6 @@ static int imx708_remove(struct i2c_client *client)
+ 	if (!pm_runtime_status_suspended(&client->dev))
+ 		imx708_power_off(&client->dev);
+ 	pm_runtime_set_suspended(&client->dev);
+-
+-	return 0;
+ }
+ 
+ static const struct of_device_id imx708_dt_ids[] = {
+@@ -1912,7 +1909,7 @@ static struct i2c_driver imx708_i2c_driver = {
+ 		.of_match_table	= imx708_dt_ids,
+ 		.pm = &imx708_pm_ops,
+ 	},
+-	.probe_new = imx708_probe,
++	.probe = imx708_probe,
+ 	.remove = imx708_remove,
+ };
+ 
