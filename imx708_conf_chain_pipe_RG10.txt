@@ -1,0 +1,11 @@
+v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes code=0x300f
+media-ctl -l '"imx708 1-001a":0->"csis-32e40000.csi":0[1]'
+media-ctl --set-v4l2 "'mxc_isi.0':1[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'mxc_isi.0':0[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'csis-32e40000.csi':1[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'imx708 1-001a':0[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'crossbar':0[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+media-ctl --set-v4l2 "'crossbar':3[fmt:SRGGB10_1X10/1536x864 field:none colorspace:raw]"
+v4l2-ctl -d /dev/video0 --set-fmt-video=width=1536,height=864,pixelformat='RG10' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+
+
