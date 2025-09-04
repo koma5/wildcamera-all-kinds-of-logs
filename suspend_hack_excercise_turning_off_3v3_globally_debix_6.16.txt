@@ -1,0 +1,39 @@
+diff --git a/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts b/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
+index af02af9e5334d..5220b686bebea 100644
+--- a/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
++++ b/arch/arm64/boot/dts/freescale/imx8mp-debix-model-a.dts
+@@ -50,10 +50,15 @@ reg_usdhc2_vmmc: regulator-usdhc2 {
+ 		pinctrl-names = "default";
+ 		pinctrl-0 = <&pinctrl_reg_usdhc2_vmmc>;
+ 		regulator-name = "VSD_3V3";
++		vin-supply = <&buck4>;
+ 		regulator-min-microvolt = <3300000>;
+ 		regulator-max-microvolt = <3300000>;
+ 		gpio = <&gpio2 19 GPIO_ACTIVE_HIGH>;
+ 		enable-active-high;
++		regulator-state-mem {
++			regulator-off-in-suspend;
++		};
++
+ 	};
+ 
+ 	reg_usb_hub: regulator-usb-hub {
+@@ -169,6 +174,10 @@ buck4: BUCK4 {
+ 				regulator-max-microvolt = <3400000>;
+ 				regulator-boot-on;
+ 				regulator-always-on;
++				regulator-state-mem {
++					regulator-off-in-suspend;
++				};
++
+ 			};
+ 
+ 			buck5: BUCK5 {
+@@ -341,6 +350,7 @@ &usdhc2 {
+ 	pinctrl-2 = <&pinctrl_usdhc2_200mhz>, <&pinctrl_usdhc2_gpio>;
+ 	cd-gpios = <&gpio2 12 GPIO_ACTIVE_LOW>;
+ 	vmmc-supply = <&reg_usdhc2_vmmc>;
++	vin-supply = <&reg_usdhc2_vmmc>;
+ 	bus-width = <4>;
+ 	status = "okay";
+ };
