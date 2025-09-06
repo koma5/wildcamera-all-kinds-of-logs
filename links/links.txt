@@ -87,4 +87,26 @@ Linux 6.12 - Linus Torvalds
 https://lore.kernel.org/all/CAHk-=wgtGkHshfvaAe_O2ntnFBH3EprNk1juieLmjcF2HBwBgQ@mail.gmail.com/
 
 
+https://trac.gateworks.com/wiki/linux/media
+https://www.kernel.org/doc/html/latest/userspace-api/media/mediactl/media-controller.html
 
+
+Basler camera
+
+steve: https://www.photonfocus.com/support/customer-service/
+
+https://gitlab.com/openwildlife/meta-debix
+
+
+somthing bitbake imx219 imx8mp yocto with/over ISP
+https://github.com/nxp-imx-support/imx-camera-sw-pack/blob/LF6.6.3_P24.1/sony_imx219_sensor/i.MX8MPLUS/meta-imx8mp-isp-imx219/recipes-bsp/isp-imx/isp-imx_%25.bbappend
+
+imx219 ISP https://github.com/nxp-imx-support/meta-imx8mp-isp-imx219/tree/LF6.6.3_P24.1
+
+
+very interresting info about ISP on imx8mp
+https://developer.ridgerun.com/wiki/index.php/ISP_Architecture_i.MX8M_Plus_:_V4L2_Sensor_Drivers_Porting_Guide
+
+
+IP camera based on imx8mp 
+https://www.hackster.io/flint-weller/make-an-ip-camera-with-the-i-mx-8m-plus-and-gstreamer-82a191
