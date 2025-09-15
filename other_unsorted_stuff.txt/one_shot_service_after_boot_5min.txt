@@ -1,0 +1,17 @@
+# /etc/systemd/system/blahhh.service  
+
+[Unit]
+Description=Set up demo.
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=bash /usr/local/bin/setup_demo.sh
+StandardOutput=journal
+TimeoutStartSec=0
+
+[Timer]
+OnBootSec=5min
+
+[Install]
+WantedBy=timers.target
