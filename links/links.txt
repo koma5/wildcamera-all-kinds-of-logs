@@ -110,3 +110,6 @@ https://developer.ridgerun.com/wiki/index.php/ISP_Architecture_i.MX8M_Plus_:_V4L
 
 IP camera based on imx8mp 
 https://www.hackster.io/flint-weller/make-an-ip-camera-with-the-i-mx-8m-plus-and-gstreamer-82a191
+
+
+https://www.redhat.com/en/blog/getting-started-socat
