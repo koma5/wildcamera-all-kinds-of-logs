@@ -1,0 +1,5 @@
+nc imx8mp 6666 | gst-launch-1.0 -v filesrc location=/dev/fd/0 blocksize=$((1536*864*2)) ! queue ! video/x-bayer,width=1536,height=864,framerate=30/1,format=rggb10le ! bayer2rgb ! videoconvert ! autovideosink
+
+
+socat TCP6-LISTEN:6666,reuseaddr,fork EXEC:'v4l2-ctl -d /dev/video0 --set-fmt-video=width=1536\,height=864\,pixelformat=RG10 --stream-mmap 1 --stream-to=-'
+
