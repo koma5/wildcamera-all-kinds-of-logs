@@ -1,0 +1,18 @@
+digraph board {
+	rankdir=TB
+	n00000001 [label="{{<port0> 0 | <port1> 1 | <port2> 2} | crossbar\n/dev/v4l-subdev0 | {<port3> 3 | <port4> 4}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000001:port3 -> n00000007:port0 [style=bold]
+	n00000001:port4 -> n00000012:port0 [style=bold]
+	n00000007 [label="{{<port0> 0} | mxc_isi.0\n/dev/v4l-subdev1 | {<port1> 1}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000007:port1 -> n0000000a [style=bold]
+	n0000000a [label="mxc_isi.0.capture\n/dev/video0", shape=box, style=filled, fillcolor=yellow]
+	n00000012 [label="{{<port0> 0} | mxc_isi.1\n/dev/v4l-subdev2 | {<port1> 1}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000012:port1 -> n00000015 [style=bold]
+	n00000015 [label="mxc_isi.1.capture\n/dev/video1", shape=box, style=filled, fillcolor=yellow]
+	n0000001d [label="mxc_isi.output\n", shape=box, style=filled, fillcolor=yellow]
+	n0000001d -> n00000001:port2 [style=bold]
+	n00000024 [label="{{<port0> 0} | csis-32e40000.csi\n/dev/v4l-subdev3 | {<port1> 1}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000024:port1 -> n00000001:port0 [style=bold]
+	n00000029 [label="{{} | vd56g3 1-0010\n/dev/v4l-subdev4 | {<port0> 0}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000029:port0 -> n00000024:port0
+}

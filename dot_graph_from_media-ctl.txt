@@ -1,0 +1,5 @@
+
+media-ctl --print-dot > st_mono.dot
+
+dot -Tps -o st_mono.ps st_mono.dot
+
