@@ -113,3 +113,6 @@ https://www.hackster.io/flint-weller/make-an-ip-camera-with-the-i-mx-8m-plus-and
 
 
 https://www.redhat.com/en/blog/getting-started-socat
+
+interesting ideas on board ISP ov5640 etc....
+https://gist.github.com/Scott31393/077a10024a6058536d3f2fdde476265a
