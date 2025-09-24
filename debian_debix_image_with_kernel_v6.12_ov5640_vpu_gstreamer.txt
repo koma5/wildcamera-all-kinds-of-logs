@@ -1,0 +1,15 @@
+root@imx8mpevk:~# media-ctl -vv --set-v4l2 "'ov5640 1-003c':0[fmt:UYVY8_2X8/1280x720 field:none colorspace:raw]"
+Opening media device /dev/media0
+Enumerating entities
+looking up device: 81:2
+looking up device: 81:3
+looking up device: 81:4
+Found 4 entities
+Enumerating pads and links
+Setting up format UYVY8_2X8 1280x720 on pad ov5640 1-003c/0
+Format set: JPEG_1X8 1280x720
+
+
+
+GST_DEBUG=3 gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw,format=UYVY,width=1280,height=720 ! vpuenc_h264 ! fakesink
+
