@@ -135,3 +135,11 @@ https://github.com/nxp-imx/linux-imx/tree/lf-6.12.y/drivers/mxc/hantro_vc8000e
 https://bootlin.com/blog/building-a-linux-system-for-the-stm32mp1-basic-system/
 
 
+
+
+this kicked off the deep dive on different IPs on imx8mp
+
+https://www.kernel.org/doc/html/v4.15/media/v4l-drivers/imx.html
+https://kernel.org/doc/html/latest/userspace-api/media/drivers/imx-uapi.html
+https://docs.kernel.org/6.15/_sources/admin-guide/media/imx.rst.txt
+https://www.kernel.org/doc/html/latest/admin-guide/media/imx.html
