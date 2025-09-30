@@ -1,0 +1,10 @@
+
+
+# 15 minutes at 30 fps with bitrate set to 200kbps results in 22MB file. Nice.
+gst-launch-1.0 videotestsrc num-buffers=$((15*60*30)) ! video/x-raw, format=I420, width=640, height=480 ! vpuenc_h264 bitrate=200 ! filesink location=test.mp4
+
+
+# recorded in debix debian image with kernel with upgraded kernel
+# Linux imx8mpevk 6.12.3 #3 SMP PREEMPT Wed Sep 24 08:51:00 BST 2025 aarch64 GNU/Linux
+# nxp / debix specific gstreamer preinstalled
+
