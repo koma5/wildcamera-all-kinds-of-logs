@@ -143,3 +143,7 @@ https://www.kernel.org/doc/html/v4.15/media/v4l-drivers/imx.html
 https://kernel.org/doc/html/latest/userspace-api/media/drivers/imx-uapi.html
 https://docs.kernel.org/6.15/_sources/admin-guide/media/imx.rst.txt
 https://www.kernel.org/doc/html/latest/admin-guide/media/imx.html
+
+
+talking about the ISP IP on the imx8mp and by total coincidence the camera ov5640
+https://gist.github.com/Scott31393/077a10024a6058536d3f2fdde476265a
