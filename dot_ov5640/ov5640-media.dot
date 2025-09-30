@@ -1,0 +1,10 @@
+digraph board {
+	rankdir=TB
+	n00000001 [label="{{<port0> 0 | <port1> 1 | <port2> 2 | <port3> 3 | <port4> 4 | <port5> 5 | <port6> 6 | <port7> 7 | <port8> 8 | <port9> 9 | <port10> 10 | <port11> 11 | <port15> 15} | mxc_isi.0\n | {<port12> 12 | <port13> 13 | <port14> 14}}", shape=Mrecord, style=filled, fillcolor=green]
+	n00000001:port12 -> n00000012
+	n00000012 [label="mxc_isi.0.capture\n/dev/video2", shape=box, style=filled, fillcolor=yellow]
+	n00000016 [label="mxc-mipi-csi2.0\n/dev/v4l-subdev0", shape=box, style=filled, fillcolor=yellow]
+	n00000016 -> n00000001:port0
+	n0000001f [label="{{} | ov5640 1-003c\n/dev/v4l-subdev1 | {<port0> 0}}", shape=Mrecord, style=filled, fillcolor=green]
+	n0000001f:port0 -> n00000016 [style=bold]
+}
