@@ -151,3 +151,11 @@ https://gist.github.com/Scott31393/077a10024a6058536d3f2fdde476265a
 
 Interview with Laurant
 https://linuxgizmos.com/libcamera-successor-to-v4l2-hopes-to-ease-embedded-linux-camera-headaches/
+
+
+
+# anything about the NPU IP block but mesa
+#Tomeu upstreaming/mainlining NPU in imx8mp
+https://docs.kernel.org/6.15/_sources/admin-guide/media/imx.rst.txt
+https://blog.tomeuvizoso.net/2024/01/etnaviv-npu-update-15-we-are-upstream.html
+
