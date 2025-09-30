@@ -116,3 +116,9 @@ https://www.redhat.com/en/blog/getting-started-socat
 
 interesting ideas on board ISP ov5640 etc....
 https://gist.github.com/Scott31393/077a10024a6058536d3f2fdde476265a
+
+
+https://wiki.st.com/stm32mpu/wiki/STM32MP13_V4L2_camera_overview
+
+felxbuild nxp debian build:
+https://github.com/nxp/flexbuild
