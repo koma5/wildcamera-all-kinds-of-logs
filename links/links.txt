@@ -130,3 +130,8 @@ https://github.com/nxp/flexbuild
 
 # vc8000e vc8ke hantro driver in nxp linux
 https://github.com/nxp-imx/linux-imx/tree/lf-6.12.y/drivers/mxc/hantro_vc8000e
+
+
+https://bootlin.com/blog/building-a-linux-system-for-the-stm32mp1-basic-system/
+
+
