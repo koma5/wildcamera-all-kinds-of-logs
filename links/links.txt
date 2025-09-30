@@ -147,3 +147,7 @@ https://www.kernel.org/doc/html/latest/admin-guide/media/imx.html
 
 talking about the ISP IP on the imx8mp and by total coincidence the camera ov5640
 https://gist.github.com/Scott31393/077a10024a6058536d3f2fdde476265a
+
+
+Interview with Laurant
+https://linuxgizmos.com/libcamera-successor-to-v4l2-hopes-to-ease-embedded-linux-camera-headaches/
