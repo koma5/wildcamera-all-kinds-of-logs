@@ -122,3 +122,11 @@ https://wiki.st.com/stm32mpu/wiki/STM32MP13_V4L2_camera_overview
 
 felxbuild nxp debian build:
 https://github.com/nxp/flexbuild
+
+
+
+
+
+
+# vc8000e vc8ke hantro driver in nxp linux
+https://github.com/nxp-imx/linux-imx/tree/lf-6.12.y/drivers/mxc/hantro_vc8000e
