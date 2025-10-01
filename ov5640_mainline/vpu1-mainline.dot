@@ -1,0 +1,8 @@
+digraph board {
+	rankdir=TB
+	n00000001 [label="nxp,imx8mq-vpu-g2-dec-source\n/dev/video4", shape=box, style=filled, fillcolor=yellow]
+	n00000001 -> n00000003 [style=bold]
+	n00000003 [label="nxp,imx8mq-vpu-g2-dec-proc\n", shape=box, style=filled, fillcolor=yellow]
+	n00000003 -> n00000006 [style=bold]
+	n00000006 [label="nxp,imx8mq-vpu-g2-dec-sink\n/dev/video4", shape=box, style=filled, fillcolor=yellow]
+}
