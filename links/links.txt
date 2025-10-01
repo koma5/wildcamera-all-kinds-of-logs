@@ -159,3 +159,9 @@ https://linuxgizmos.com/libcamera-successor-to-v4l2-hopes-to-ease-embedded-linux
 https://docs.kernel.org/6.15/_sources/admin-guide/media/imx.rst.txt
 https://blog.tomeuvizoso.net/2024/01/etnaviv-npu-update-15-we-are-upstream.html
 
+oo
+
+
+
+
+https://gitlab.com/ideasonboard/nxp/linux/-/compare/master...v6.17%2Fisp?from_project_id=11281838
