@@ -170,3 +170,14 @@ https://gitlab.com/ideasonboard/nxp/linux/-/compare/master...v6.17%2Fisp?from_pr
 embedded event in France 
 https://embedded-recipes.org/2025/attend/
 
+
+
+FOSDEM 2018 - Image capture on embedded linux systems
+https://archive.fosdem.org/2018/schedule/event/image_capture_on_embedded_linux/
+
+
+
+Video Pipeline — gstreamer_tutorial 1 documentation
+https://www.fanyamin.com/gstreamer-cookbook/doc/build/html/3.application/video_pipeline
+.html
+
