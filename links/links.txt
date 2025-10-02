@@ -165,3 +165,8 @@ oo
 
 
 https://gitlab.com/ideasonboard/nxp/linux/-/compare/master...v6.17%2Fisp?from_project_id=11281838
+
+
+embedded event in France 
+https://embedded-recipes.org/2025/attend/
+
