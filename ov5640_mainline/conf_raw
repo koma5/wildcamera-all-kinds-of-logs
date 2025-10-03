@@ -1,0 +1,18 @@
+v4l2-ctl -d /dev/v4l-subdev4  --list-subdev-mbus-codes
+v4l2-ctl -d /dev/v4l-subdev4 --list-subdev-framesizes code=0x3014
+
+
+media-ctl -d /dev/media2 -l '"ov5640 1-003c":0->"csis-32e40000.csi":0[1]'
+media-ctl -d /dev/media2 --set-v4l2 "'mxc_isi.0':1[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+media-ctl -d /dev/media2 --set-v4l2 "'mxc_isi.0':0[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+media-ctl -d /dev/media2 --set-v4l2 "'csis-32e40000.csi':1[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+media-ctl -d /dev/media2 --set-v4l2 "'ov5640 1-003c':0[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+media-ctl -d /dev/media2 --set-v4l2 "'crossbar':0[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+media-ctl -d /dev/media2 --set-v4l2 "'crossbar':3[fmt:SRGGB8_1X8/2592x1944 field:none colorspace:raw]"
+
+
+sleep 5
+
+v4l2-ctl -d /dev/video0 --set-fmt-video=width=2592,height=1944,pixelformat='RGGB' --stream-mmap 1 --stream-count=1 --stream-to=test.raw --verbose 
+
+
