@@ -188,3 +188,6 @@ https://www.youtube.com/watch?v=x9ndjdvXPl0
 
 BKK19-506 - Libcamera: Making Complex Cameras Easy - YouTube
 https://www.youtube.com/watch?v=S04jOKWHWOg
+
+
+https://uapi-group.org/docs/minutes/2024-09-24__image-based-linux-summit/
