@@ -181,3 +181,10 @@ Video Pipeline — gstreamer_tutorial 1 documentation
 https://www.fanyamin.com/gstreamer-cookbook/doc/build/html/3.application/video_pipeline
 .html
 
+
+
+Learn How to Support Your SoC and ISP in Libcamera - Laurent Pinchart, Ideas on Board - YouTube
+https://www.youtube.com/watch?v=x9ndjdvXPl0
+
+BKK19-506 - Libcamera: Making Complex Cameras Easy - YouTube
+https://www.youtube.com/watch?v=S04jOKWHWOg
