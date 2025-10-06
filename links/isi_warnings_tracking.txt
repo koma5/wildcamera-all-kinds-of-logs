@@ -1,5 +1,5 @@
 
-
+# irq isi pipe warning blahhhh
 
 #first found here: (I get these errors too)
 https://lkml.org/lkml/2025/8/13/1686
@@ -10,3 +10,6 @@ https://patchwork.kernel.org/project/linux-media/list/?series=994066
 
 # asked to pull here:
 https://lore.kernel.org/all/20251001172511.2d0514ec@sal.lan/
+
+# here is wehre they asked Linux to pull from (media/v6.18-1)
+https://git.kernel.org/pub/scm/linux/kernel/git/mchehab/linux-media.git
