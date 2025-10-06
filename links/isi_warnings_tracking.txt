@@ -1,0 +1,12 @@
+
+
+
+#first found here: (I get these errors too)
+https://lkml.org/lkml/2025/8/13/1686
+
+# it is fixed here:
+https://patchwork.kernel.org/project/linux-media/list/?series=994066
+
+
+# asked to pull here:
+https://lore.kernel.org/all/20251001172511.2d0514ec@sal.lan/
