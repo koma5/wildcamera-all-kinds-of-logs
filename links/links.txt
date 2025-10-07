@@ -191,3 +191,7 @@ https://www.youtube.com/watch?v=S04jOKWHWOg
 
 
 https://uapi-group.org/docs/minutes/2024-09-24__image-based-linux-summit/
+
+#rkisp ressources
+https://opensource.rock-chips.com/wiki_Rockchip-isp1
+https://www.kernel.org/doc/html/latest/admin-guide/media/rkisp1.html
