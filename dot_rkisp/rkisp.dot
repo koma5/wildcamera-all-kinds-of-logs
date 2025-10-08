@@ -1,7 +1,7 @@
 digraph board {
         rankdir=TB
         n00000001 [label="{{<port0> 0 | <port1> 1} | rkisp1_isp\n/dev/v4l-subdev0 | {<port2> 2 | <port3> 3}}", shape=Mrecord, style=filled, fillcolor=green]
-        n00000001:port2 -> n00000006:port0 [style=dashed]
+        n00000001:port2 -> n00000006:port0
         n00000001:port3 -> n0000000d [style=bold]
         n00000006 [label="{{<port0> 0} | rkisp1_resizer_mainpath\n/dev/v4l-subdev1 | {<port1> 1}}", shape=Mrecord, style=filled, fillcolor=green]
         n00000006:port1 -> n00000009 [style=bold]
@@ -10,7 +10,7 @@ digraph board {
         n00000011 [label="rkisp1_params\n/dev/video2", shape=box, style=filled, fillcolor=yellow]
         n00000011 -> n00000001:port1 [style=bold]
         n0000001d [label="{{<port0> 0} | csis-32e40000.csi\n/dev/v4l-subdev2 | {<port1> 1}}", shape=Mrecord, style=filled, fillcolor=green]
-        n0000001d:port1 -> n00000001:port0 [style=dashed]
+        n0000001d:port1 -> n00000001:port0
         n00000022 [label="{{} | ov5640 1-003c\n/dev/v4l-subdev3 | {<port0> 0}}", shape=Mrecord, style=filled, fillcolor=green]
         n00000022:port0 -> n0000001d:port0
 }
