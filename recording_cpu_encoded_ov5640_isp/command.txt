@@ -1,2 +1,7 @@
 gst-launch-1.0 v4l2src device=/dev/video0  !  video/x-raw, width=900, height=800, framerate=30/1, format=YUY2 !  clockoverlay time-form
 at="%F %H:%M:%S" ! videoconvert ! x264enc bitrate=500 !  filesink location=500kps_recording.mp4
+
+
+# color is off because there's still this frame start error with this camera. And there is a shiftet area which is cropped by the ISP atm.
+# this is fixable and not present in other cameras. The timestamps are off. Why it plays too fast in mpv.
+# vlc is refusing to play it... for the same reason I think. But nice first recorded, encoded moving picture. =)
