@@ -23,19 +23,19 @@ media-ctl    -d  "platform:rkisp1"  -l  '"csis-32e40000.csi":1 -> "rkisp1_isp":0
 "media-ctl" "-d" "platform:rkisp1" "-l" "'rkisp1_isp':2 -> 'rkisp1_resizer_mainpath':0 [1]"
 
 # set format for vd56g3 1-0010:0
-"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"vd56g3 1-0010":0 [fmt:Y10_1X10/1124x1364^]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"vd56g3 1-0010":0 [fmt:Y8_1X8/1124x1364]'
 
 # set format for rkisp1_isp pads:
-"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":0 [fmt:Y10_1X10/1124x1364 crop: (0,0)/1600x1200]'
-"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":2 [fmt:Y10_1X10/1600x1200 crop: (0,0)/1500x1100]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":0 [fmt:Y8_1X8/1124x1364 crop: (0,0)/1600x1200]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":2 [fmt:Y8_1X8/1600x1200 crop: (0,0)/1500x1100]'
 
 # set format for rkisp1_resizer_mainpath pads:
-"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":0 [fmt:Y10_1X10/1500x1100 crop: (300,400)/1400x1000]'
-"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":1 [fmt:Y10_1x10/900x800]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":0 [fmt:Y8_1X8/1500x1100 crop: (300,400)/1400x1000]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":1 [fmt:Y8_1X8/900x800]'
 
 # set format for rkisp1_mainpath:
 "v4l2-ctl" "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "-v" "width=900,height=800,"
-"v4l2-ctl" "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "-v" "pixelformat=422P"
+"v4l2-ctl" "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "-v" "pixelformat=GREY"
 
 # start streaming:
 v4l2-ctl "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "--stream-mmap" "--stream-count" "10" --verbose
