@@ -1,0 +1,41 @@
+
+#root@imx8mp:~# v4l2-ctl -d /dev/v4l-subdev3  --list-subdev-mbus-codes
+#ioctl: VIDIOC_SUBDEV_ENUM_MBUS_CODE (pad=0)
+#        0x2001: MEDIA_BUS_FMT_Y8_1X8
+#        0x200a: MEDIA_BUS_FMT_Y10_1X10
+#root@imx8mp:~# v4l2-ctl -d /dev/v4l-subdev3 --list-subdev-framesizes code=0x200a
+#ioctl: VIDIOC_SUBDEV_ENUM_FRAME_SIZE (pad=0)
+#        Size Range: 1124x1364 - 1124x1364
+#        Size Range: 1120x1360 - 1120x1360
+#        Size Range: 1024x1280 - 1024x1280
+#        Size Range: 1024x768 - 1024x768
+#        Size Range: 768x1024 - 768x1024
+#        Size Range: 720x1280 - 720x1280
+#        Size Range: 640x480 - 640x480
+#        Size Range: 480x640 - 480x640
+#        Size Range: 320x240 - 320x240
+
+
+# set the links
+"media-ctl" "-d" "platform:rkisp1" "-r"
+media-ctl    -d  "platform:rkisp1"  -l  '"vd56g3 1-0010":0 -> "csis-32e40000.csi":0 [1]'
+media-ctl    -d  "platform:rkisp1"  -l  '"csis-32e40000.csi":1 -> "rkisp1_isp":0 [1]'
+"media-ctl" "-d" "platform:rkisp1" "-l" "'rkisp1_isp':2 -> 'rkisp1_resizer_mainpath':0 [1]"
+
+# set format for vd56g3 1-0010:0
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"vd56g3 1-0010":0 [fmt:Y10_1X10/1124x1364^]'
+
+# set format for rkisp1_isp pads:
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":0 [fmt:Y10_1X10/1124x1364 crop: (0,0)/1600x1200]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_isp":2 [fmt:Y10_1X10/1600x1200 crop: (0,0)/1500x1100]'
+
+# set format for rkisp1_resizer_mainpath pads:
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":0 [fmt:Y10_1X10/1500x1100 crop: (300,400)/1400x1000]'
+"media-ctl" "-d" "platform:rkisp1" "--set-v4l2" '"rkisp1_resizer_mainpath":1 [fmt:Y10_1x10/900x800]'
+
+# set format for rkisp1_mainpath:
+"v4l2-ctl" "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "-v" "width=900,height=800,"
+"v4l2-ctl" "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "-v" "pixelformat=422P"
+
+# start streaming:
+v4l2-ctl "-z" "platform:rkisp1" "-d" "rkisp1_mainpath" "--stream-mmap" "--stream-count" "10" --verbose
