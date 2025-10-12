@@ -200,3 +200,8 @@ https://www.kernel.org/doc/html/latest/admin-guide/media/rkisp1.html
 https://coaxion.net/blog/2022/05/instantaneous-rtp-synchronization-retrieval-of-absolute-sender-clock-times-with-gstreamer/
 
 https://www.kernel.org/doc/html/v4.11/admin-guide/dynamic-debug-howto.html
+
+
+
+https://lkml.org/
+https://subspace.kernel.org/etiquette.html
