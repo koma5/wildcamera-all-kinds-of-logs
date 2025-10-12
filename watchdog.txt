@@ -1,0 +1,5 @@
+to enable watchdog timer:
+/etc/systemd/system.conf:#RuntimeWatchdogSec=off
+
+I don't know if it's a piece of hardware outside the SoC or inside. But it is able to reset the board when it becomes unresponsive.
+It the timer times out and linux has not reset the timer it fires.
