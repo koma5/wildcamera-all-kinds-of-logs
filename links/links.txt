@@ -205,3 +205,8 @@ https://www.kernel.org/doc/html/v4.11/admin-guide/dynamic-debug-howto.html
 
 https://lkml.org/
 https://subspace.kernel.org/etiquette.html
+
+
+
+info about media systems.
+https://docs.kernel.org/admin-guide/media/building.html
