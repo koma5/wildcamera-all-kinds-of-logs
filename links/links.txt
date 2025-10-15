@@ -213,3 +213,4 @@ https://docs.kernel.org/admin-guide/media/building.html
 
 
 https://github.com/STMicroelectronics/meta-st-openstlinux
+https://wiki.yoctoproject.org/wiki/Releases
