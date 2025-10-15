@@ -210,3 +210,6 @@ https://subspace.kernel.org/etiquette.html
 
 info about media systems.
 https://docs.kernel.org/admin-guide/media/building.html
+
+
+https://github.com/STMicroelectronics/meta-st-openstlinux
