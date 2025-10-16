@@ -11,3 +11,12 @@ bitbake core-image-sato
 runqemu qemux86-64
 runqemu qemux86-64
 runqemu qemux86-64
+
+
+# yocto-nxp-debix
+git clone https://github.com/debix-tech/yocto-nxp-debix.git
+# from readme:
+sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 python3-subunit zstd liblz4-tool file locales libacl1
+
+EULA=1 DISTRO=fsl-imx-xwayland MACHINE=imx8mp-lpddr4-evk source imx-setup-release.sh -b Model_AB_Infinity
+bitbake imx-image-full
