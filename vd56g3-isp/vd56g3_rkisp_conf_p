@@ -1,3 +1,6 @@
+# this is not functioning!
+# just recorded to not loose it. But not working !!
+
 
 #root@imx8mp:~# v4l2-ctl -d /dev/v4l-subdev3  --list-subdev-mbus-codes
 #ioctl: VIDIOC_SUBDEV_ENUM_MBUS_CODE (pad=0)
