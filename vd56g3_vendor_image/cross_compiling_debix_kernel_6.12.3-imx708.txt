@@ -1,4 +1,8 @@
-has been abandoned...
+has been abandoned... again. =,D
+
+vd56g3 has been introduced first this year 2025 with commit 87aa97fc315759323475c3742664547830256d83
+
+not sure how easy to backport the driver.
 
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- imx_v8_defconfig
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=build-modules LOCALVERSION="" -j$(nproc) Image
