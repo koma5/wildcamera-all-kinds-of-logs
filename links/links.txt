@@ -214,3 +214,6 @@ https://docs.kernel.org/admin-guide/media/building.html
 
 https://github.com/STMicroelectronics/meta-st-openstlinux
 https://wiki.yoctoproject.org/wiki/Releases
+
+
+https://docs.beagleboard.org/boards/beagley/ai/demos/using-edge-ai.html
