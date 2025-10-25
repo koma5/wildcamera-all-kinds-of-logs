@@ -1,0 +1,27 @@
+[    0.079223] platform soc@0: Fixed dependency cycle(s) with /soc@0/bus@30000000/efuse@30350000/unique-id@8
+[    0.081678] platform 30330000.pinctrl: Fixed dependency cycle(s) with /soc@0/bus@30000000/pinctrl@30330000/hoggrp
+[    0.082126] imx8mp-pinctrl 30330000.pinctrl: initialized IMX pinctrl driver
+[    0.082642] platform 30350000.efuse: Fixed dependency cycle(s) with /soc@0/bus@30000000/clock-controller@30380000
+[    0.083860] platform 30350000.efuse: Fixed dependency cycle(s) with /soc@0/bus@30000000/clock-controller@30380000
+[    0.084566] platform 30380000.clock-controller: Fixed dependency cycle(s) with /soc@0/interrupt-controller@38800000
+[    0.096038] platform 32fc6000.lcd-controller: Fixed dependency cycle(s) with /soc@0/bus@32c00000/hdmi@32fd8000
+[    0.096392] platform 32fc6000.lcd-controller: Fixed dependency cycle(s) with /soc@0/bus@32c00000/hdmi@32fd8000
+[    0.096499] platform 32fd8000.hdmi: Fixed dependency cycle(s) with /soc@0/bus@32c00000/lcd-controller@32fc6000
+[    0.098208] platform 32e10000.isp: Fixed dependency cycle(s) with /soc@0/bus@32c00000/camera/csi@32e40000
+[    0.098494] platform 32e10000.isp: Fixed dependency cycle(s) with /soc@0/bus@32c00000/camera/csi@32e40000
+[    0.098618] platform 32e40000.csi: Fixed dependency cycle(s) with /soc@0/bus@32c00000/camera/isp@32e10000
+[    0.098685] platform 32e40000.csi: Fixed dependency cycle(s) with /soc@0/bus@3080000
+
+
+[    9.162851] imx8_media_dev: module is from the staging directory, the quality is unknown, you have been warned.
+[    9.163629] mx8-img-md: Remote device at port@0 not found
+[    9.273498] vvcam_dwe: loading out-of-tree module taints kernel.
+[    9.273565] vvcam_dwe: disagrees about version of symbol _printk
+[    9.273570] vvcam_dwe: Unknown symbol _printk (err -22)
+[    9.273604] vvcam_dwe: disagrees about version of symbol _dev_err
+[    9.273608] vvcam_dwe: Unknown symbol _dev_err (err -22)
+[    9.300429] vvcam_isp: disagrees about version of symbol _printk
+[    9.300447] vvcam_isp: Unknown symbol _printk (err -22)
+[    9.300496] vvcam_isp: disagrees about version of symbol _dev_err
+[    9.300500] vvcam_isp: Unknown symbol _dev_err (err -22)
+
