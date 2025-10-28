@@ -219,3 +219,6 @@ https://wiki.yoctoproject.org/wiki/Releases
 https://docs.beagleboard.org/boards/beagley/ai/demos/using-edge-ai.html
 
 https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/exports/docs/tiovx/docs/user_guide/group__group__vision__function__vpac__viss.html
+
+
+https://git.uk.ideasonboard.com/camera
