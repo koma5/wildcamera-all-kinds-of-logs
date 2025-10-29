@@ -6,6 +6,19 @@ https://www.st.com/en/development-tools/stm32n6-ai.html
 set resolution to 1368x768 not higher and also not lower.
 Otherwise you won't see certain buttons at the bottom.
 
+copy udev rules
+cp ~/STMicroelectronics/STM32Cube/STM32CubeProgrammer/Drivers/rules/* /etc/udev/rules.d/
+
+
+Select MX66UW1G45G_STM32N6570-DK under Externel Loaders on the buttom left.
+
+Erase Programming select other AI Demo (for example hand landmarks)
+select unziped files from https://www.st.com/en/development-tools/stm32n6-ai.html
+
+[Star Programming]
+
+
+
 
 ok also other IDE vscode based:
 https://www.st.com/content/st_com/en/stm32-mcu-developer-zone/software-development-tools/stm32cubevscode.html
