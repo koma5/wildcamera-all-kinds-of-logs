@@ -1,0 +1,11 @@
+download ST CubeProg with guest light registration
+
+search for STM32N6 AI download model.
+https://www.st.com/en/development-tools/stm32n6-ai.html
+
+set resolution to 1368x768 not higher and also not lower.
+Otherwise you won't see certain buttons at the bottom.
+
+
+ok also other IDE vscode based:
+https://www.st.com/content/st_com/en/stm32-mcu-developer-zone/software-development-tools/stm32cubevscode.html
