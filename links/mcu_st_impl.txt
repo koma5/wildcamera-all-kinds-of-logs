@@ -7,3 +7,7 @@ https://forum.beagleboard.org/t/csi-imx219-camera-to-work-with-beagley-ai/41235
 
 camera capture USB cam. Aber weiss nicht recht ob DK dann als USB cam auftaucht oder ob USB cams angeschlossen werden können.
 https://github.com/STMicroelectronics/x-cube-n6-camera-capture
+
+
+# getting started grade:
+https://github.com/STMicroelectronics/STM32N6-GettingStarted-SemanticSegmentation¨
