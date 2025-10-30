@@ -1,0 +1,2 @@
+favourite AI demo source code:
+https://github.com/STMicroelectronics/x-cube-n6-camera-capture
