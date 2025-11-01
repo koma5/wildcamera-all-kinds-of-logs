@@ -224,3 +224,8 @@ https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/latest/expor
 https://git.uk.ideasonboard.com/camera
 
 https://www.youtube.com/watch?v=-fwJZzDpBIg&list=PLEB5F4gTNK68zDlrXbcCgJ6NejaP0PvHX
+
+Introduction to RTOS Part 7 - Semaphore | Digi-Key Electronics - YouTube
+https://www.youtube.com/watch?v=5JcMtbA9QEE&list=PLXyB2ILBXW5FLc7j2hLcX6sAGbmH0JxX8
+
+
