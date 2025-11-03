@@ -229,6 +229,7 @@ Introduction to RTOS Part 7 - Semaphore | Digi-Key Electronics - YouTube
 https://www.youtube.com/watch?v=5JcMtbA9QEE&list=PLXyB2ILBXW5FLc7j2hLcX6sAGbmH0JxX8
 
 
+BeagleBoard BeagleY-AI SBC - Overview & Testing - YouTube
 https://www.youtube.com/watch?v=hk1bndjaGr4
 
 littlefs-project/littlefs: A little fail-safe filesystem designed for microcontrollers
