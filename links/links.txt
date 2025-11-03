@@ -230,3 +230,6 @@ https://www.youtube.com/watch?v=5JcMtbA9QEE&list=PLXyB2ILBXW5FLc7j2hLcX6sAGbmH0J
 
 
 https://www.youtube.com/watch?v=hk1bndjaGr4
+
+littlefs-project/littlefs: A little fail-safe filesystem designed for microcontrollers
+https://github.com/littlefs-project/littlefs?tab=readme-ov-file
