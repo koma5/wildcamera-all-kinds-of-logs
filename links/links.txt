@@ -235,4 +235,6 @@ https://www.youtube.com/watch?v=hk1bndjaGr4
 littlefs-project/littlefs: A little fail-safe filesystem designed for microcontrollers
 https://github.com/littlefs-project/littlefs?tab=readme-ov-file
 
+
+Achieve new performance levels in your industrial and consumer applications with the STM32N6 - YouTube
 https://www.youtube.com/watch?v=yDEr76t0bhY
