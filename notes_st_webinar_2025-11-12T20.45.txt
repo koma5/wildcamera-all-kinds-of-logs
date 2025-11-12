@@ -17,3 +17,10 @@ packaged or as die.
 
 Feb 2026. =,D
 
+Q&A:
+
+* 22 pin raspi connector!
+* Auto Exposure. Statistics to support alogs on ISP your are using.
+* 
+
+
