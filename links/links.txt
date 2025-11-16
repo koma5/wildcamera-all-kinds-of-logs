@@ -238,3 +238,6 @@ https://github.com/littlefs-project/littlefs?tab=readme-ov-file
 
 Achieve new performance levels in your industrial and consumer applications with the STM32N6 - YouTube
 https://www.youtube.com/watch?v=yDEr76t0bhY
+
+beagleY-AI serial:
+https://docs.beagleboard.org/boards/beagley/ai/02-quick-start.html#beagley-ai-headless
